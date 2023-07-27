@@ -1,15 +1,14 @@
-// projectDetailsReducer.js
 const initialState = {
-  projectDetails: null,
+  emailDetails: null,
   loading: false,
   error: null,
 };
 
-const projectDetailsReducer = (state = initialState, action) => {
+const emailDetailsReducer = (state = initialState, action) => {
   
   switch (action.type) {
  
-    case 'FETCH_PROJECT_DETAILS_SUCCESS':
+    case 'FETCH_EMAIL_DETAILS_SUCCESS':
       // return { ...state, data: action.payload, loading: false, error: null };
 
       return {
@@ -18,7 +17,7 @@ const projectDetailsReducer = (state = initialState, action) => {
         loading: false,
         error: null,
       };
-    case 'FETCH_PROJECT_DETAILS_FAILURE':
+    case 'FETCH_EMAIL_DETAILS_FAILURE':
       return {
         ...state,
         projectDetails: null,
@@ -30,4 +29,4 @@ const projectDetailsReducer = (state = initialState, action) => {
   }
 };
 
-export default projectDetailsReducer;
+export default emailDetailsReducer;

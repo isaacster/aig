@@ -2,11 +2,14 @@ import './App.css';
 import LoginForm from './Components/LoginForm';
 import { AuthContext } from './Components/AuthContext';
 import React, { useContext, useState } from 'react';
-import ProjectContainer from './Components/ProjectManagement/ProjectContainer';
+import EmailContainer from './Components/ProjectManagement/EmailContainer';
+import GlobalContext from './Components/GlobalContext';
 
 function App() {
 
-  const { isLoggedIn } = useContext(AuthContext);
+  GlobalContext.ApiUrl = "https://localhost:44320/employeesgate";
+  GlobalContext.headers = { 'Content-Type': 'application/json' };
+ // const { isLoggedIn } = useContext(AuthContext);
 
   return (
     <div>
@@ -15,22 +18,28 @@ function App() {
         Hi from Itzik !
       </p>
 
-      {isLoggedIn ? (
+      {/*       {isLoggedIn ? (
         null) :
         (
           <p style={{ color: "red", padding: "15px" }}>
             password is 1234 username itzik.yehuda@gmail.com
           </p>
-        )}
+        )} */}
 
-      {isLoggedIn ? (
+
+      {/*   {isLoggedIn ? (
         <React.Fragment >
           <ProjectContainer> </ProjectContainer>
         </React.Fragment>) :
         (
           <LoginForm />
-        )}
-        
+        )} */}
+
+
+      <React.Fragment >
+        <EmailContainer> </EmailContainer>
+      </React.Fragment>
+
     </div>
   );
 }

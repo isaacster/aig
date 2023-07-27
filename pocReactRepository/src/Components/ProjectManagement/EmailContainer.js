@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
-import { fetchData } from '../../actions/projectActions';
-import ProjectDetails from './ProjectDetailsPopup';
+import { fetchData } from '../../actions/emailActions';
+//import EmailDetails from './EmailDetailsPopup';
+import EmailReschedule from './EmailReschedule';
 
-const ProjectContainer = ({ data, loading, error, fetchData }) => {
+const EmailContainer = ({ data, loading, error, fetchData }) => {
     const [selectedProject, setSelectedProject] = useState(null);
     const [isPopupOpen, setPopupOpen] = useState(false);
     const [orderBy, setOrderBy] = useState('id');
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleProjectClick = (project) => {
+        debugger;
         console.log('handleProjectClick' + project);
         setSelectedProject(project);
         setPopupOpen(true);
@@ -101,7 +103,7 @@ const ProjectContainer = ({ data, loading, error, fetchData }) => {
 
             {isPopupOpen && selectedProject && (
                 <div className="popup-container">
-                    <ProjectDetails projectId={selectedProject.id} onClose={() => setPopupOpen(false)} />
+                    <EmailReschedule email={selectedProject} onClose={() => setPopupOpen(false)} />
                 </div>
             )}
         </div>
@@ -118,4 +120,4 @@ const mapDispatchToProps = {
     fetchData,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(ProjectContainer);
+export default connect(mapStateToProps, mapDispatchToProps)(EmailContainer);

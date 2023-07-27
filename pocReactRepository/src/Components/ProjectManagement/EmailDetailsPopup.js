@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchProjectDetails } from '../../actions/projectActions';
+import { fetchEmailDetails } from '../../actions/emailActions';
+import GlobalContext from '../GlobalContext';
 
-const ProjectDetailsPopup = ({ projectId, onClose }) => {
+
+const EmailDetailsPopup = ({ projectId, onClose }) => {
   
   const dispatch = useDispatch();
   const projectDetails = useSelector((state) => state.projectDetails.projectDetails);
@@ -10,7 +12,7 @@ const ProjectDetailsPopup = ({ projectId, onClose }) => {
   useEffect(() => {
     // Get project details when the pop-up is opened
     if (projectId) {
-      dispatch(fetchProjectDetails(projectId));
+      dispatch(fetchEmailDetails(projectId));
     }
   }, [dispatch, projectId]);
 
@@ -36,4 +38,4 @@ const ProjectDetailsPopup = ({ projectId, onClose }) => {
   );
 };
 
-export default ProjectDetailsPopup;
+export default EmailDetailsPopup;

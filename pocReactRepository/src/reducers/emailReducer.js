@@ -4,7 +4,7 @@ const initialState = {
     error: null,
   };
   
-  const projectReducer = (state = initialState, action) => {
+  const emailReducer = (state = initialState, action) => {
     switch (action.type) {
       case 'FETCH_DATA_LOADING':
         return { ...state, loading: true, error: null };
@@ -17,4 +17,4 @@ const initialState = {
     }
   };
   
-  export default projectReducer;
+  export default emailReducer;
