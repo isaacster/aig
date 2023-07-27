@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { rescheduleEmail } from '../api';
 
-const EmailReschedule = ({ email }) => {
+const EmailReschedule = ({ email, onClose }) => {
     //const [showDetails, setShowDetails] = useState(false);
     const [rescheduleOption, setRescheduleOption] = useState(null);
     const [customDateTime, setCustomDateTime] = useState('');
@@ -105,7 +105,8 @@ const EmailReschedule = ({ email }) => {
                                     onChange={(e) => setCustomDateTime(e.target.value)}
                                 />
                             )}
-                            <button className="reschedule-btn reschedule-action-btn" onClick={handleReschedule}>Reschedule</button>
+                            <button className="margin-top reschedule-btn reschedule-action-btn" onClick={handleReschedule}>Reschedule</button>
+                            <button className="margin-top reschedule-btn reschedule-action-btn close cancel-btn" onClick={onClose}>Cancel</button>
                         </div>
                     }
                 </div>

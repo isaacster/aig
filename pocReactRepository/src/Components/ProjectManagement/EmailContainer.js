@@ -11,7 +11,7 @@ const EmailContainer = ({ data, loading, error, fetchData }) => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleProjectClick = (project) => {
-        
+
         console.log('handleProjectClick' + project);
         setSelectedProject(project);
         setPopupOpen(true);
@@ -31,22 +31,26 @@ const EmailContainer = ({ data, loading, error, fetchData }) => {
         setSearchQuery(event.target.value);
     };
 
-    if (!data || !data.projects || data.projects.length === 0) {
-        return <p>No projects found.</p>;
+    if (!data || !data.emails || data.emails.length === 0) {
+        return <p>No emails found.</p>;
     }
 
-    let sortedProjects = [...data.projects];
-    if (orderBy) {        
-        sortedProjects.sort((a, b) => { //comparison 
-            if (orderBy.startsWith('-')) { //indicates that the sorting should be performed in descending order 
-                return b[orderBy.slice(1)].localeCompare(a[orderBy.slice(1)]);
-            }
-            return a[orderBy].localeCompare(b[orderBy]);
-        });
-    }
+    let sortedEmails = [...data.emails];
+
+
+    /* if (orderBy) {     
+         debugger;   
+         sortedEmails.sort((a, b) => { //comparison 
+             if (orderBy.startsWith('-')) { //indicates that the sorting should be performed in descending order 
+                 return b[orderBy.slice(1)].localeCompare(a[orderBy.slice(1)]);
+             }
+             return a[orderBy].localeCompare(b[orderBy]);
+         });
+     }
+ */
 
     if (searchQuery) {
-        sortedProjects = sortedProjects.filter((project) =>
+        sortedEmails = sortedEmails.filter((project) =>
             //extracts all the property values of the project object as an array.
             Object.values(project).some((value) =>
                 String(value).toLowerCase().includes(searchQuery.toLowerCase())
@@ -75,25 +79,22 @@ const EmailContainer = ({ data, loading, error, fetchData }) => {
                 <table className="table-container">
                     <thead>
                         <tr>
-                            <th onClick={() => handleSorting('id')}>ID</th>
-                            <th onClick={() => handleSorting('name')}>Name</th>
-                            <th onClick={() => handleSorting('client')}>Client</th>
-                            <th onClick={() => handleSorting('description')}>Description</th>
-                            <th onClick={() => handleSorting('startDate')}>Start Date</th>
-                            <th onClick={() => handleSorting('endDate')}>End Date</th>
-                            <th onClick={() => handleSorting('status')}>Status</th>                             
+                            <th onClick={() => handleSorting('messageId')}>MessageId</th>
+                            <th onClick={() => handleSorting('timestamp')}>Date</th>
+                            <th onClick={() => handleSorting('recipient')}>Recipient</th>
+                            <th onClick={() => handleSorting('subject')}>Subject</th>
+                            <th onClick={() => handleSorting('message')}>Message</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {sortedProjects.map((project) => (
-                            <tr key={project.id} onClick={() => handleProjectClick(project)}>
-                                <td>{project.id}</td>
-                                <td>{project.name}</td>
-                                <td>{project.client}</td>
-                                <td>{project.description}</td>
-                                <td>{project.startDate}</td>
-                                <td>{project.endDate}</td>
-                                <td>{project.status}</td>                               
+                        {sortedEmails.map((email) => (
+                            <tr key={email.messageId} onClick={() => handleProjectClick(email)}>
+                                <td>{email.messageId}</td>
+                                <td>{email.timestamp}</td>
+                                <td>{email.recipient}</td>
+                                <td>{email.subject}</td>
+                                <td>{email.message}</td>
+
                             </tr>
                         ))}
                     </tbody>

@@ -1,32 +1,340 @@
 {
-    "projects": [
-      {
-        "id": "1423423",
-        "name": "Social Media Campaign for Product X",
-        "client": "ABC Electronics",
-        "description": "Creating and managing a social media marketing campaign for the launch of Product X",
-        "startDate": "2023-08-01",
-        "endDate": "2023-09-15",
-        "status": "In Progress"       
-      },
-      {
-        "id": "2454345",
-        "name": "Website Redesign for XYZ Clothing",
-        "client": "XYZ Clothing",
-        "description": "Redesigning the website for XYZ Clothing brand to improve user experience and branding.",
-        "startDate": "2023-07-01",
-        "endDate": "2023-09-30",
-        "status": "Completed"       
-      },
-      {
-        "id": "323e23e23e",
-        "name": "Print Ad Campaign for New Product Line",
-        "client": "DEF Pharmaceuticals",
-        "description": "Designing and implementing a print ad campaign for the launch of a new product line by DEF Pharmaceuticals",
-        "startDate": "2023-09-01",
-        "endDate": "2023-10-31",
-        "status": "Planned"
-      }
-    ]
-  }
-  
+  "emails": [
+    {
+      "messageId": "1",
+      "timestamp": "2023-07-27T10:30:00Z",
+      "recipient": "john@example.com",
+      "subject": "Greetings",
+      "message": "Hello John, How are you?"
+    },
+    {
+      "messageId": "2",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "3",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "4",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "5",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "6",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "7",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "8",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "9",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "10",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "11",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "12",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "13",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "14",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "15",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "16",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "17",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "18",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "19",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "20",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "21",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "22",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "23",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "24",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "25",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "26",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "27",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "28",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "29",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "30",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "31",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "32",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "33",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "34",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "35",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "36",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "37",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "38",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "39",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "40",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "41",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "42",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "43",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "44",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "45",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "46",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "47",
+      "timestamp": "2023-07-27T12:15:00Z",
+      "recipient": "susan@example.com",
+      "subject": "Meeting Reminder",
+      "message": "Hi Susan, Just a reminder about our meeting at 2 PM today."
+    },
+    {
+      "messageId": "48",
+      "timestamp": "2023-07-28T09:00:00Z",
+      "recipient": "michael@example.com",
+      "subject": "Re: Vacation Request",
+      "message": "Hi Michael, Your vacation request has been approved. Enjoy your time off!"
+    }
+  ]
+}

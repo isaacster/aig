@@ -60,9 +60,9 @@ export const fetchEmailDetails = (emailId) => async (dispatch) => {
     //const response = await fetch(`/api/projects/${projectId}`);
 
      
-    const projectsData = myDjsonSampleata;
+    const emailData = myDjsonSampleata;
 
-    const filtered = projectsData.projects.filter(proj => {
+    const filtered = emailData.emails.filter(proj => {
       return proj.id === emailId;
     });
 
