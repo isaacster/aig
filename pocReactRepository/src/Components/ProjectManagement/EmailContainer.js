@@ -11,7 +11,7 @@ const EmailContainer = ({ data, loading, error, fetchData }) => {
     const [searchQuery, setSearchQuery] = useState('');
 
     const handleProjectClick = (project) => {
-        debugger;
+        
         console.log('handleProjectClick' + project);
         setSelectedProject(project);
         setPopupOpen(true);

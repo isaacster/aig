@@ -149,3 +149,54 @@ button {
 .active-button{
   color: red;
 }
+
+
+
+
+.email-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.email-summary {
+  cursor: pointer;
+}
+
+.email-details {
+  display: none;
+}
+
+.email-details.show {
+  display: block;
+}
+
+.reschedule-options {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+}
+
+.reschedule-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.reschedule-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.reschedule-action-btn {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+.reschedule-action-btn:hover {
+  background-color: #0056b3;
+}

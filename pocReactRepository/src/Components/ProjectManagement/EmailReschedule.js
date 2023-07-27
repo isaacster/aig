@@ -10,7 +10,7 @@ const EmailReschedule = ({ email }) => {
         try {
             // Extract the emailId from the email object or wherever it's available
             const emailId = email.id;
-            debugger;
+            
             let rescheduleTimeToSend = '';
 
             if (rescheduleOption === 'Custom') {
@@ -72,10 +72,10 @@ const EmailReschedule = ({ email }) => {
             await rescheduleEmail(emailId, message, rescheduleTimeToSend);
 
             // Handle success or show a notification if needed
-            alert('Email re-scheduled successfully!');
+            //alert('Email re-scheduled successfully!');
         } catch (error) {
             // Handle the error or show an error notification
-            alert('Failed to re-schedule email.');
+           // alert('Failed to re-schedule email.');
             setRescheduleOption('');
         }
     };
@@ -91,20 +91,21 @@ const EmailReschedule = ({ email }) => {
                     {/* Render reschedule options */}
                     {
                         <div>
-                            <button className={rescheduleOption == 1 ? 'active-button' : ''} onClick={() => setRescheduleOption(1)}>Later today</button>
-                            <button onClick={() => setRescheduleOption(2)}>Tomorrow</button>
-                            <button onClick={() => setRescheduleOption(3)}>Later this week</button>
-                            <button onClick={() => setRescheduleOption(4)}>This weekend</button>
-                            <button onClick={() => setRescheduleOption(5)}>Next week</button>
-                            <button onClick={() => setRescheduleOption('Custom')}>Custom date-time</button>
+                            <button className={rescheduleOption == 1 ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption(1)}>Later today</button>
+                            <button className={rescheduleOption == 2 ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption(2)}>Tomorrow</button>
+                            <button className={rescheduleOption == 3 ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption(3)}>Later this week</button>
+                            <button className={rescheduleOption == 4 ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption(4)}>This weekend</button>
+                            <button className={rescheduleOption == 5 ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption(5)}>Next week</button>
+                            <button className={rescheduleOption == 'Custom' ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption('Custom')}>Custom date-time</button>
                             {rescheduleOption === 'Custom' && (
                                 <input
                                     type="datetime-local"
+                                    className="custom-datetime-input"
                                     value={customDateTime}
                                     onChange={(e) => setCustomDateTime(e.target.value)}
                                 />
                             )}
-                            <button onClick={handleReschedule}>Reschedule</button>
+                            <button className="reschedule-btn reschedule-action-btn" onClick={handleReschedule}>Reschedule</button>
                         </div>
                     }
                 </div>

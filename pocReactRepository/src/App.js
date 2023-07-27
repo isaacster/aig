@@ -7,7 +7,7 @@ import GlobalContext from './Components/GlobalContext';
 
 function App() {
 
-  GlobalContext.ApiUrl = "https://localhost:44320/employeesgate";
+  GlobalContext.ApiUrl = "https://localhost:44375/api/";
   GlobalContext.headers = { 'Content-Type': 'application/json' };
  // const { isLoggedIn } = useContext(AuthContext);
 

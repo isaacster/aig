@@ -17,20 +17,35 @@ using Microsoft.EntityFrameworkCore;
 namespace PocHomeAssignmentRestApi
 {
     public class Startup
-    {       
+    {
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
         }
 
         public IConfiguration Configuration { get; }
-        
+
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();           
+            services.AddControllers();
+
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "AllowAll",
+                                  builder =>
+                                  {
+                                      builder.AllowAnyOrigin()
+                                       .AllowAnyMethod()
+                                       .AllowAnyHeader();
+                                      // .AllowCredentials();
+                                  });
+            });
+
+
 
             //  Change Scoped to Singleton if you want a single instance throughout the application lifetime or Transient if you want a new instance every time it's requested.
-            services.AddScoped<ILoggerRepository, LoggerRepository>();            
+            services.AddScoped<ILoggerRepository, LoggerRepository>();
 
             //services.AddAuthentication(options =>
             //{
@@ -41,6 +56,10 @@ namespace PocHomeAssignmentRestApi
             //{
             //    options.ApiKey = "xd4f!dfsd@sdf"; 
             //});
+
+
+
+
 
             services.AddDbContext<LoggerDbContext>(options =>
          options.UseSqlServer(Configuration.GetConnectionString("LoggerDbContext")));
@@ -60,6 +79,9 @@ namespace PocHomeAssignmentRestApi
             app.UseRouting();
 
             //app.UseAuthorization();
+
+            app.UseCors("AllowAll");
+
 
             app.UseEndpoints(endpoints =>
             {
