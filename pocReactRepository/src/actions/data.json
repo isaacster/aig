@@ -1,0 +1,32 @@
+{
+    "projects": [
+      {
+        "id": "1423423",
+        "name": "Social Media Campaign for Product X",
+        "client": "ABC Electronics",
+        "description": "Creating and managing a social media marketing campaign for the launch of Product X",
+        "startDate": "2023-08-01",
+        "endDate": "2023-09-15",
+        "status": "In Progress"       
+      },
+      {
+        "id": "2454345",
+        "name": "Website Redesign for XYZ Clothing",
+        "client": "XYZ Clothing",
+        "description": "Redesigning the website for XYZ Clothing brand to improve user experience and branding.",
+        "startDate": "2023-07-01",
+        "endDate": "2023-09-30",
+        "status": "Completed"       
+      },
+      {
+        "id": "323e23e23e",
+        "name": "Print Ad Campaign for New Product Line",
+        "client": "DEF Pharmaceuticals",
+        "description": "Designing and implementing a print ad campaign for the launch of a new product line by DEF Pharmaceuticals",
+        "startDate": "2023-09-01",
+        "endDate": "2023-10-31",
+        "status": "Planned"
+      }
+    ]
+  }
+  

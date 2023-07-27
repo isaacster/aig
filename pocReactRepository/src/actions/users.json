@@ -1,0 +1,28 @@
+{
+    "users": [
+      {
+        "id": 1,
+        "name": "John Doe",
+        "email": "itzik.yehuda@gmail.com",
+        "age": 30,
+        "city": "New York",
+        "password": "1234"
+      },
+      {
+        "id": 2,
+        "name": "Jane Smith",
+        "email": "jane@example.com",
+        "age": 25,
+        "city": "Los Angeles",
+        "password": "1234"
+      },
+      {
+        "id": 3,
+        "name": "Bob Johnson",
+        "email": "bob@example.com",
+        "age": 35,
+        "city": "Chicago",
+        "password": "1234"
+      }
+    ]
+  }
