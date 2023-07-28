@@ -108,3 +108,8 @@ C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\runti
 C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Security.Principal.Windows.dll
 C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.1\System.Windows.Extensions.dll
+C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\Quartz.AspNetCore.dll
+C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\Quartz.Extensions.DependencyInjection.dll
+C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\Quartz.Extensions.Hosting.dll
+C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\JobScheduler.dll
+C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\JobScheduler.pdb

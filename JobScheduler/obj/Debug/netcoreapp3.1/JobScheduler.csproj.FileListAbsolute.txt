@@ -1,0 +1,9 @@
+C:\Users\itzik\source\aig\JobScheduler\bin\Debug\netcoreapp3.1\JobScheduler.deps.json
+C:\Users\itzik\source\aig\JobScheduler\bin\Debug\netcoreapp3.1\JobScheduler.dll
+C:\Users\itzik\source\aig\JobScheduler\bin\Debug\netcoreapp3.1\JobScheduler.pdb
+C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.AssemblyInfoInputs.cache
+C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.AssemblyInfo.cs
+C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.csproj.CoreCompileInputs.cache
+C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.dll
+C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.pdb
+C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.csproj.AssemblyReference.cache

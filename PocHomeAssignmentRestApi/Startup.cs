@@ -13,6 +13,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using PocHomeAssignmentRestApi.Authentication;
 using Microsoft.EntityFrameworkCore;
+using Quartz.Impl;
+using Quartz;
+using JobScheduler;
+using Quartz.AspNetCore;
+using Quartz.Spi;
 
 namespace PocHomeAssignmentRestApi
 {
@@ -28,9 +33,12 @@ namespace PocHomeAssignmentRestApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-
+           
             services.AddCors(options =>
+
+
+
+
             {
                 options.AddPolicy(name: "AllowAll",
                                   builder =>
@@ -40,25 +48,28 @@ namespace PocHomeAssignmentRestApi
                                        .AllowAnyHeader();
                                       // .AllowCredentials();
                                   });
+
             });
+
+            services.AddSingleton<IScheduleService, ScheduleService>();
+
+            // Quartz setup
+            //services.AddSingleton<IJobFactory, JobFactory>();
+            //services.AddSingleton<ISchedulerFactory, StdSchedulerFactory>();
+            //services.AddSingleton<SendEmailJob>(); // Add the SendEmailJob to DI container
+            //                                       //services.AddHostedService<QuartzHostedService>();
+
+            //services.AddQuartzHostedService(options =>
+            //{
+            //    // when shutting down we want jobs to complete gracefully
+            //    options.WaitForJobsToComplete = true;
+            //});
+
 
 
 
             //  Change Scoped to Singleton if you want a single instance throughout the application lifetime or Transient if you want a new instance every time it's requested.
             services.AddScoped<ILoggerRepository, LoggerRepository>();
-
-            //services.AddAuthentication(options =>
-            //{
-            //    options.DefaultAuthenticateScheme = "ApiKeyAuthenticationScheme"; 
-            //    options.DefaultChallengeScheme = "ApiKeyAuthenticationScheme"; 
-            //})
-            //.AddScheme<ApiKeyAuthenticationOptions, ApiKeyAuthenticationHandler>("ApiKeyAuthenticationScheme", options =>
-            //{
-            //    options.ApiKey = "xd4f!dfsd@sdf"; 
-            //});
-
-
-
 
 
             services.AddDbContext<LoggerDbContext>(options =>
@@ -69,6 +80,19 @@ namespace PocHomeAssignmentRestApi
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+
+            //// Start the Quartz scheduler
+            //var schedulerFactory = app.ApplicationServices.GetService<ISchedulerFactory>();
+
+            //Task<IScheduler> schedulerTask = schedulerFactory.GetScheduler();
+
+            //IScheduler scheduler = schedulerTask.GetAwaiter().GetResult();
+
+
+            //scheduler.Start().GetAwaiter().GetResult();
+
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -81,6 +105,7 @@ namespace PocHomeAssignmentRestApi
             //app.UseAuthorization();
 
             app.UseCors("AllowAll");
+
 
 
             app.UseEndpoints(endpoints =>

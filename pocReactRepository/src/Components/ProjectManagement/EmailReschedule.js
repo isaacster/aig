@@ -5,18 +5,26 @@ const EmailReschedule = ({ email, onClose }) => {
     //const [showDetails, setShowDetails] = useState(false);
     const [rescheduleOption, setRescheduleOption] = useState(null);
     const [customDateTime, setCustomDateTime] = useState('');
+    const [rescheduleResponse, setRescheduleResponse] = useState(null);
 
     const handleReschedule = async () => {
         try {
+            setRescheduleResponse('');
             // Extract the emailId from the email object or wherever it's available
             const emailId = email.id;
-            
+
             let rescheduleTimeToSend = '';
 
             if (rescheduleOption === 'Custom') {
                 rescheduleTimeToSend = customDateTime;
             }
             else {
+
+                if (!rescheduleOption) {
+                    setRescheduleResponse('Please select a date');
+                    return;
+                }
+
                 const now = new Date();
                 switch (rescheduleOption) {
                     case 1:
@@ -72,10 +80,13 @@ const EmailReschedule = ({ email, onClose }) => {
             await rescheduleEmail(emailId, message, rescheduleTimeToSend);
 
             // Handle success or show a notification if needed
+            setRescheduleResponse('Email re-scheduled successfully!');
             //alert('Email re-scheduled successfully!');
         } catch (error) {
+
+            setRescheduleResponse('Failed to re-schedule email.');
             // Handle the error or show an error notification
-           // alert('Failed to re-schedule email.');
+
             setRescheduleOption('');
         }
     };
@@ -107,6 +118,8 @@ const EmailReschedule = ({ email, onClose }) => {
                             )}
                             <button className="margin-top reschedule-btn reschedule-action-btn" onClick={handleReschedule}>Reschedule</button>
                             <button className="margin-top reschedule-btn reschedule-action-btn close cancel-btn" onClick={onClose}>Cancel</button>
+                            <br></br>
+                            <span>{rescheduleResponse}</span>
                         </div>
                     }
                 </div>

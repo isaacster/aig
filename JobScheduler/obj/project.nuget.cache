@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "dgSpecHash": "ZT4wRQnBpB6mHvuwAxZlASQo2kOGUbMC9Jlvz5Kd8o2r5Q5uaQKDjAeC3BIWabVAMncpAp8cKwx3THR3QsndWA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\itzik\\source\\aig\\JobScheduler\\JobScheduler.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.0\\microsoft.extensions.configuration.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.0\\microsoft.extensions.dependencyinjection.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks\\3.1.0\\microsoft.extensions.diagnostics.healthchecks.3.1.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.extensions.diagnostics.healthchecks.abstractions\\3.1.0\\microsoft.extensions.diagnostics.healthchecks.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\3.1.0\\microsoft.extensions.fileproviders.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\3.1.0\\microsoft.extensions.hosting.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.0\\microsoft.extensions.logging.abstractions.3.1.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.extensions.options\\3.1.0\\microsoft.extensions.options.3.1.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.0\\microsoft.extensions.primitives.3.1.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\quartz\\3.6.3\\quartz.3.6.3.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\quartz.aspnetcore\\3.6.3\\quartz.aspnetcore.3.6.3.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\quartz.extensions.dependencyinjection\\3.6.3\\quartz.extensions.dependencyinjection.3.6.3.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\quartz.extensions.hosting\\3.6.3\\quartz.extensions.hosting.3.6.3.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\system.configuration.configurationmanager\\6.0.1\\system.configuration.configurationmanager.6.0.1.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\system.security.accesscontrol\\6.0.0\\system.security.accesscontrol.6.0.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\system.security.cryptography.protecteddata\\6.0.0\\system.security.cryptography.protecteddata.6.0.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\system.security.permissions\\6.0.0\\system.security.permissions.6.0.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\system.windows.extensions\\6.0.0\\system.windows.extensions.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

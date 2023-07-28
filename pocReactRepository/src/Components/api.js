@@ -4,38 +4,26 @@ import GlobalContext from '../Components/GlobalContext';
 
 export const rescheduleEmail = async (emailId, message, newDateTime) => {
     try {
-        debugger;
+      //  debugger;
 
 
-        const logToUpdate = {
-            ID: 5,
-            ActivityData: 'Updated activity data', // Replace this with the updated value for ActivityData
-            Timestamp: new Date(), // Replace this with the updated value for Timestamp
-        };
+      const requestModel = {
+        MessageId: 'your_message_id',
+        RescheduleTime: 'your_reschedule_time',
+      };
+  
+      // Make the Axios POST request
+      const response = await axios.post(
+        'https://localhost:44375/api/Email/RescheduleAction',
+        requestModel,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        }
+      );
 
-
-        const response = await axios.put(`https://localhost:44375/api/Logger/${logToUpdate.ID}`, logToUpdate, {
-            headers: {
-                'Content-Type': 'application/json',
-            },
-
-
-
-            //  const response = await axios.put(`https://localhost:44375/api/Logger/5`, {
-
-
-            //await axios.put(`${GlobalContext.ApiUrl}/Logger/5`, {   //${emailId}
-
-            //await axios.put(`/api/emails/${emailId}/reschedule`, {
-            ActivityData: "sdfsdfsdfsdfsdf",
-        },
-
-            {
-                headers: {
-                    'Content-Type': 'application/json'
-                }
-            }
-        );
+      
         return response.data; // If needed, return the response data
     } catch (error) {
         throw error;
