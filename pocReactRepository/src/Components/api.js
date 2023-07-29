@@ -2,19 +2,22 @@
 import axios from 'axios';
 import GlobalContext from '../Components/GlobalContext';
 
-export const rescheduleEmail = async (emailId, message, newDateTime) => {
+export const rescheduleEmail = async (email, newDateTime) => {
     try {
-      //  debugger;
+        debugger;
 
 
       const requestModel = {
-        MessageId: 'your_message_id',
-        RescheduleTime: 'your_reschedule_time',
+        MessageId: email.messageId,
+        emailMessage: email.message,
+        RescheduleTime: newDateTime,
       };
   
+      //`${GlobalContext.ApiUrl}Email/RescheduleAction`
+
       // Make the Axios POST request
       const response = await axios.post(
-        'https://localhost:44375/api/Email/RescheduleAction',
+        `${GlobalContext.ApiUrl}Email/RescheduleAction`,
         requestModel,
         {
           headers: {

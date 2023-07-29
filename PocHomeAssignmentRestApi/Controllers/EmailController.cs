@@ -16,12 +16,12 @@ public class EmailController : ControllerBase
 {
     private readonly ILoggerRepository _loggerRepository;
 
-    private readonly IScheduleService _scheduler;
+    private readonly IEmailScheduleService _scheduler;
 
-    
+
 
     //taking the logger repository for logging activity , and scheduling interface 
-    public EmailController(IScheduleService scheduler, ILoggerRepository loggerRepository)
+    public EmailController(IEmailScheduleService scheduler, ILoggerRepository loggerRepository)
     {
         _loggerRepository = loggerRepository;
         _scheduler = scheduler;
@@ -34,11 +34,9 @@ public class EmailController : ControllerBase
     {
         try
         {
+            _loggerRepository.AddLog(new LogTable() { ActivityData = "RescheduleActionAsync", Timestamp = DateTime.Now });
 
-
-
-             await _scheduler.DoTaskAsync("Dfgdfg");
-
+            await _scheduler.RescheduleSendEmailAsync(requestModel.MessageId, requestModel.Message, requestModel.RescheduleTime);
 
             return Ok("Jobs scheduled successfully!");
         }
@@ -48,10 +46,6 @@ public class EmailController : ControllerBase
             return StatusCode(500, new { Error = "An error occurred during the custom action." });
         }
     }
-
-
-
-
 
     // GET: api/Email/5
     [HttpGet("{id}")]
@@ -66,9 +60,6 @@ public class EmailController : ControllerBase
     {
         throw new NotImplementedException();
     }
-
-
-
 
     // PUT: api/Email/5
     [HttpPut("{id}")]
@@ -93,11 +84,10 @@ public class EmailController : ControllerBase
 
 public class RescheduleRequestModel
 {
-
     public string MessageId { get; set; }
 
-    public string RescheduleTime { get; set; }
+    public string Message { get; set; }
 
-
+    public DateTime RescheduleTime { get; set; }
 }
 

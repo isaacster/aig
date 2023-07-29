@@ -51,7 +51,7 @@ namespace PocHomeAssignmentRestApi
 
             });
 
-            services.AddSingleton<IScheduleService, ScheduleService>();
+            services.AddSingleton<IEmailScheduleService, EmailScheduleService>();
 
             // Quartz setup
             //services.AddSingleton<IJobFactory, JobFactory>();

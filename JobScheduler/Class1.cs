@@ -9,22 +9,6 @@ using Quartz.Spi;
 namespace JobScheduler
 {
 
-    public class SendEmailJob : IJob
-    {
-        public Task Execute(IJobExecutionContext context)
-        {
-            // Replace this with the actual logic to send the email
-            // You can access the email ID and datetime from the JobDataMap
-            JobDataMap dataMap = context.JobDetail.JobDataMap;
-            string emailId = dataMap.GetString("EmailId");
-            DateTime sendDateTime = dataMap.GetDateTime("SendDateTime");
-
-            // Add your email sending logic here...
-
-            return Task.CompletedTask;
-        }
-    }
-
     public class QuartzHostedService : IHostedService
     {
         private readonly IScheduler scheduler;
