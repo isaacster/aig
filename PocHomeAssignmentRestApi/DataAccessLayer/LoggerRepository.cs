@@ -34,8 +34,15 @@ public class LoggerRepository : ILoggerRepository
 
     public async Task AddLog(LogTable log)
     {
-        _dbContext.LogTable.Add(log);
-        await _dbContext.SaveChangesAsync();
+        try
+        {
+            _dbContext.LogTable.Add(log);
+            await _dbContext.SaveChangesAsync();
+        }
+        catch (System.Exception)
+        {
+
+        }
     }
 
     public async Task UpdateLog(LogTable log)

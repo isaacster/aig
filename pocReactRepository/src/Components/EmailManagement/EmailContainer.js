@@ -4,15 +4,15 @@ import { fetchData } from '../../actions/emailActions';
 import EmailReschedule from './EmailReschedule';
 
 const EmailContainer = ({ data, loading, error, fetchData }) => {
-    const [selectedProject, setSelectedProject] = useState(null);
+    const [selectedEmail, setSelectedEmail] = useState(null);
     const [isPopupOpen, setPopupOpen] = useState(false);
     const [orderBy, setOrderBy] = useState('id');
     const [searchQuery, setSearchQuery] = useState('');
 
-    const handleProjectClick = (project) => {
+    const handleEmailClick = (email) => {
 
-        console.log('handleProjectClick' + project);
-        setSelectedProject(project);
+        console.log('handleEmailClick' + email);
+        setSelectedEmail(email);
         setPopupOpen(true);
     };
 
@@ -49,9 +49,9 @@ const EmailContainer = ({ data, loading, error, fetchData }) => {
  */
 
     if (searchQuery) {
-        sortedEmails = sortedEmails.filter((project) =>
-            //extracts all the property values of the project object as an array.
-            Object.values(project).some((value) =>
+        sortedEmails = sortedEmails.filter((email) =>
+           
+            Object.values(email).some((value) =>
                 String(value).toLowerCase().includes(searchQuery.toLowerCase())
             )
         );
@@ -67,9 +67,9 @@ const EmailContainer = ({ data, loading, error, fetchData }) => {
 
     return (
         <div>
-            <input className='search-projects'
+            <input className='search-emails'
                 type="text"
-                placeholder="Search projects"
+                placeholder="Search emails"
                 value={searchQuery}
                 onChange={handleSearchChange}
             />
@@ -87,7 +87,7 @@ const EmailContainer = ({ data, loading, error, fetchData }) => {
                     </thead>
                     <tbody>
                         {sortedEmails.map((email) => (
-                            <tr key={email.messageId} onClick={() => handleProjectClick(email)}>
+                            <tr key={email.messageId} onClick={() => handleEmailClick(email)}>
                                 <td>{email.messageId}</td>
                                 <td>{email.timestamp}</td>
                                 <td>{email.recipient}</td>
@@ -101,9 +101,9 @@ const EmailContainer = ({ data, loading, error, fetchData }) => {
                 {/* ... Rest of your component code ... */}
             </div>
 
-            {isPopupOpen && selectedProject && (
+            {isPopupOpen && selectedEmail && (
                 <div className="popup-container">
-                    <EmailReschedule email={selectedProject} onClose={() => setPopupOpen(false)} />
+                    <EmailReschedule email={selectedEmail} onClose={() => setPopupOpen(false)} />
                 </div>
             )}
         </div>

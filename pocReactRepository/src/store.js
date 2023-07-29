@@ -2,7 +2,6 @@
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers'; 
-import emailDetailsReducer from './reducers/emailDetailsReducer';
 import emailReducer from './reducers/emailReducer';
 import thunkMiddleware from 'redux-thunk';
 

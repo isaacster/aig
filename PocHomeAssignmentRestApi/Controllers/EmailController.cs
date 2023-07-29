@@ -18,8 +18,6 @@ public class EmailController : ControllerBase
 
     private readonly IEmailScheduleService _scheduler;
 
-
-
     //taking the logger repository for logging activity , and scheduling interface 
     public EmailController(IEmailScheduleService scheduler, ILoggerRepository loggerRepository)
     {
@@ -41,8 +39,7 @@ public class EmailController : ControllerBase
             return Ok("Jobs scheduled successfully!");
         }
         catch (Exception ex)
-        {
-            // Handle exceptions if needed
+        {           
             return StatusCode(500, new { Error = "An error occurred during the custom action." });
         }
     }
@@ -79,6 +76,7 @@ public class EmailController : ControllerBase
         throw new NotImplementedException();
     }
 
+    /*
     // PUT: api/Email/5
     [HttpPut("{id}")]
     public async Task<IActionResult> UpdateEmail(int id, LogTable log)
@@ -98,6 +96,8 @@ public class EmailController : ControllerBase
     {
         throw new NotImplementedException();
     }
+
+    */
 }
 
 

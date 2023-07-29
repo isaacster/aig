@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 namespace JobScheduler
 {
 
-
     public interface IEmailScheduleService
     {
         Task RescheduleSendEmailAsync(RescheduleRequestModel requestModel);
@@ -52,13 +51,6 @@ namespace JobScheduler
                 .WithIdentity(Guid.NewGuid().ToString())
                 .SetJobData(data)
                 .Build();
-
-            // Create a trigger that will fire the job at the specified datetime
-            //ITrigger trigger = TriggerBuilder.Create()
-            //    .WithIdentity(Guid.NewGuid().ToString())
-            //    .StartAt(DateTime.Now.AddDays(1))
-            //    .Build();
-
 
             ITrigger trigger = TriggerBuilder.Create()
                .WithIdentity(Guid.NewGuid().ToString())

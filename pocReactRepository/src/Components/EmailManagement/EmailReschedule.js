@@ -15,10 +15,8 @@ const EmailReschedule = ({ email, onClose }) => {
 
             let rescheduleTimeToSend = '';
 
-
-
             if (rescheduleOption === 'Custom') {
-                rescheduleTimeToSend = customDateTime;
+                rescheduleTimeToSend = new Date(customDateTime);
             }
             else {
 
@@ -32,7 +30,7 @@ const EmailReschedule = ({ email, onClose }) => {
                     case 100:
                         //a. 1 min FOR TESTING
                         const minute = new Date(now);
-                        minute.setMinutes(now.getMinutes() + 1);  
+                        minute.setMinutes(now.getMinutes() + 1);
                         console.log(minute);
                         rescheduleTimeToSend = minute;
                         break;
@@ -87,7 +85,7 @@ const EmailReschedule = ({ email, onClose }) => {
                     : `Reschedule to ${rescheduleOption}`;
 
 
-                    debugger;
+            debugger;
 
             let finalDate = rescheduleTimeToSend.toISOString();
 
@@ -107,15 +105,14 @@ const EmailReschedule = ({ email, onClose }) => {
 
     return (
         <div>
-            {/* Render summary of the email    <div onClick={() => setShowDetails(!showDetails)}> <span>{email.subject}</span>    <span>{email.sender}</span>       </div> */}
-
 
             <div className="modal">
                 <div className="modal-content">
+                    <div className="schedule-header"> Snooze untill...</div>
 
                     {/* Render reschedule options */}
                     {
-                        <div>
+                        <div className='reschedule-wrapper'>
                             <button className={rescheduleOption == 100 ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption(100)}>1 min testing</button>
                             <br></br>
                             <button className={rescheduleOption == 1 ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption(1)}>Later today</button>
@@ -128,7 +125,7 @@ const EmailReschedule = ({ email, onClose }) => {
                             <br></br>
                             <button className={rescheduleOption == 5 ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption(5)}>Next week</button>
                             <br></br>
-                            <button className={rescheduleOption == 'Custom' ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption('Custom')}>Custom date-time</button>
+                            <button className={rescheduleOption == 'Custom' ? 'active-button reschedule-btn' : 'reschedule-btn'} onClick={() => setRescheduleOption('Custom')}>Pick date-time</button>
                             {rescheduleOption === 'Custom' && (
                                 <input
                                     type="datetime-local"
@@ -137,7 +134,7 @@ const EmailReschedule = ({ email, onClose }) => {
                                     onChange={(e) => setCustomDateTime(e.target.value)}
                                 />
                             )}
-                             <br></br>
+                            <br></br>
                             <button className="margin-top reschedule-btn reschedule-action-btn" onClick={handleReschedule}>Reschedule</button>
                             <button className="margin-top reschedule-btn reschedule-action-btn close cancel-btn" onClick={onClose}>Cancel</button>
                             <br></br>

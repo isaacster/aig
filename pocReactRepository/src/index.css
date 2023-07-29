@@ -82,7 +82,9 @@ code {
 
 
 
-
+.reschedule-wrapper {
+  width: 280px;
+}
 
 
 /*
@@ -103,7 +105,7 @@ table {
   border-spacing: 0px;
 }
  */
-.search-projects {
+.search-emails {
   margin-bottom: 15px;
   margin-left: 50px;
   margin-left: 105px;
@@ -184,7 +186,8 @@ button {
   padding: 8px 12px;
   margin-bottom: 5px;
   border-radius: 4px;
-  cursor: pointer;  
+  cursor: pointer;
+  width: 130px;
 }
 
 .reschedule-btn:hover {
@@ -201,10 +204,14 @@ button {
   background-color: #0056b3;
 }
 
-.cancel-btn {  
+.cancel-btn {
   float: right;
 }
 
 .margin-top {
-  margin-top: 15px;  
+  margin-top: 15px;
+}
+
+.schedule-header {
+  margin-bottom: 10px;
 }
