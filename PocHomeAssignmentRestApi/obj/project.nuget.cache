@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "0IwwxzR8j3VC5fiuSoAAB3b7Zvcmlt0eXBf0bryV+NTk4eZUOytC54hgVgH6R4T+uBZISq2/UjNHXT0yiWfQiA==",
+  "dgSpecHash": "on4diKwT8/8AatWYGSeFQlZUuK+z0hJfV4LpLE4il6NFIjMKWUc+u+5oJt8bZonscm/B7+6ivERjLy8VqL1lxQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\itzik\\source\\aig\\PocHomeAssignmentRestApi\\PocHomeAssignmentRestApi.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\itzik\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "C:\\Users\\itzik\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\itzik\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\itzik\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\itzik\\.nuget\\packages\\quartz\\3.6.3\\quartz.3.6.3.nupkg.sha512",
     "C:\\Users\\itzik\\.nuget\\packages\\quartz.aspnetcore\\3.6.3\\quartz.aspnetcore.3.6.3.nupkg.sha512",
     "C:\\Users\\itzik\\.nuget\\packages\\quartz.extensions.dependencyinjection\\3.6.3\\quartz.extensions.dependencyinjection.3.6.3.nupkg.sha512",

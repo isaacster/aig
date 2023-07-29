@@ -36,13 +36,31 @@ public class EmailController : ControllerBase
         {
             _loggerRepository.AddLog(new LogTable() { ActivityData = "RescheduleActionAsync", Timestamp = DateTime.Now });
 
-            await _scheduler.RescheduleSendEmailAsync(requestModel.MessageId, requestModel.Message, requestModel.RescheduleTime);
+            await _scheduler.RescheduleSendEmailAsync(requestModel);
 
             return Ok("Jobs scheduled successfully!");
         }
         catch (Exception ex)
         {
             // Handle exceptions if needed
+            return StatusCode(500, new { Error = "An error occurred during the custom action." });
+        }
+    }
+
+    // Custom POST: api/Email/RescheduleAction
+    [HttpPost("SendMail")] // Use a custom route for the custom action
+    public async Task<IActionResult> SendMail([FromBody] SendMailRequestModel requestModel)
+    {
+        try
+        {
+            _loggerRepository.AddLog(new LogTable() { ActivityData = "SendMail from scheduler command: " + requestModel.MessageId, Timestamp = DateTime.Now });
+
+            return Ok("Mail sent successfully!");
+        }
+        catch (Exception ex)
+        {
+            _loggerRepository.AddLog(new LogTable() { ActivityData = "SendMail failed , message id: " + requestModel.MessageId, Timestamp = DateTime.Now });
+
             return StatusCode(500, new { Error = "An error occurred during the custom action." });
         }
     }
@@ -82,12 +100,5 @@ public class EmailController : ControllerBase
     }
 }
 
-public class RescheduleRequestModel
-{
-    public string MessageId { get; set; }
 
-    public string Message { get; set; }
-
-    public DateTime RescheduleTime { get; set; }
-}
 

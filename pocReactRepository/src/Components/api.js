@@ -11,6 +11,7 @@ export const rescheduleEmail = async (email, newDateTime) => {
         MessageId: email.messageId,
         emailMessage: email.message,
         RescheduleTime: newDateTime,
+        Recipient: email.recipient
       };
   
       //`${GlobalContext.ApiUrl}Email/RescheduleAction`

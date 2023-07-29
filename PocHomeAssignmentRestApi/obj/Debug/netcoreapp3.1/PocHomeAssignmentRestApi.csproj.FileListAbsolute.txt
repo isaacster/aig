@@ -113,3 +113,4 @@ C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\Quart
 C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\Quartz.Extensions.Hosting.dll
 C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\JobScheduler.dll
 C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\JobScheduler.pdb
+C:\Users\itzik\source\aig\PocHomeAssignmentRestApi\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
