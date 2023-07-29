@@ -6,3 +6,4 @@ C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.Asse
 C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.csproj.CoreCompileInputs.cache
 C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.dll
 C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.pdb
+C:\Users\itzik\source\aig\JobScheduler\obj\Debug\netcoreapp3.1\JobScheduler.csproj.AssemblyReference.cache

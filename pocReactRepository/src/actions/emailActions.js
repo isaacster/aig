@@ -1,10 +1,10 @@
 import myDjsonSampleata from './data.json';
 import axios from 'axios';
 
-
 export const UPDATE_EMAIL_SUCCESS = 'UPDATE_EMAIL_SUCCESS';
 export const UPDATE_EMAIL_FAILURE = 'UPDATE_EMAIL_FAILURE';
 
+/*
 //This can be used used to update email for resending it MAYBE in case we need it... 
 export const updateEmail = (id, updatedData) => {
   return (dispatch) => {
@@ -26,7 +26,7 @@ export const updateEmail = (id, updatedData) => {
       });
   };
 };
-
+*/
 
 
 
@@ -36,8 +36,7 @@ export const fetchData = () => {
     try {
       // Dispatch a loading action to indicate that data is being fetched
       dispatch({ type: 'FETCH_DATA_LOADING' });
-
- ;
+      
       // Fetch data from the API
       const response = myDjsonSampleata;
       
@@ -54,12 +53,11 @@ export const fetchData = () => {
   };
 };
 
+/*
 export const fetchEmailDetails = (emailId) => async (dispatch) => {
   try {
-    //Getting the data from json for testing purposes only !
-    //const response = await fetch(`/api/projects/${projectId}`);
-
-     
+    
+    
     const emailData = myDjsonSampleata;
 
     const filtered = emailData.emails.filter(proj => {
@@ -72,3 +70,4 @@ export const fetchEmailDetails = (emailId) => async (dispatch) => {
     dispatch({ type: 'FETCH_EMAIL_DETAILS_FAILURE', error: 'Failed to fetch email details.' });
   }
 };
+*/
