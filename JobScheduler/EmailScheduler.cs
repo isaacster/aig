@@ -11,7 +11,7 @@ namespace JobScheduler
 
     public interface IEmailScheduleService
     {
-        Task RescheduleSendEmailAsync(RescheduleRequestModel requestModel);
+        Task<string> RescheduleSendEmailAsync(RescheduleRequestModel requestModel);
     }
 
     public class EmailScheduleService : IEmailScheduleService
@@ -31,14 +31,26 @@ namespace JobScheduler
             Scheduler.Start();
         }
 
-        public async Task RescheduleSendEmailAsync(RescheduleRequestModel requestModel)
+        public async Task<string> RescheduleSendEmailAsync(RescheduleRequestModel requestModel)
         {
-            TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("Israel Standard Time");
-            DateTime cstTime = TimeZoneInfo.ConvertTimeFromUtc(requestModel.RescheduleTime, cstZone);
 
+            try
+            {
+                if (requestModel == null)
+                {
+                    return "Error, empty request ! .";
+                }
 
-            // Prepare the data for the job
-            var data = new JobDataMap
+                TimeZoneInfo cstZone = TimeZoneInfo.FindSystemTimeZoneById("Israel Standard Time");
+                DateTime cstTime = TimeZoneInfo.ConvertTimeFromUtc(requestModel.RescheduleTime, cstZone);
+
+                if (cstTime < DateTime.Now)
+                {
+                    return "Error, can't reschedule to the past ! .";
+                }
+
+                // Prepare the data for the job
+                var data = new JobDataMap
             {
                 { "EmailId", requestModel.MessageId },
                 { "Message", requestModel.Message} ,
@@ -46,20 +58,28 @@ namespace JobScheduler
                 { "NumOfAttempts", requestModel.NumOfAttempts}
             };
 
-            // Create a new job with the specified schedule
-            IJobDetail job = JobBuilder.Create<SendEmailJob>()
-                .WithIdentity(Guid.NewGuid().ToString())
-                .SetJobData(data)
-                .Build();
+                // Create a new job with the specified schedule
+                IJobDetail job = JobBuilder.Create<SendEmailJob>()
+                    .WithIdentity(Guid.NewGuid().ToString())
+                    .SetJobData(data)
+                    .Build();
 
-            ITrigger trigger = TriggerBuilder.Create()
-               .WithIdentity(Guid.NewGuid().ToString())
-               .StartAt(cstTime)
-               //.StartAt(DateTime.Now.AddMinutes(1).ToUniversalTime()) //use this for easier testing, set by 1 minute   rescheduleDate
-               .Build();
+                ITrigger trigger = TriggerBuilder.Create()
+                   .WithIdentity(Guid.NewGuid().ToString())
+                   .StartAt(cstTime)
+                   //.StartAt(DateTime.Now.AddMinutes(1).ToUniversalTime()) //use this for easier testing, set by 1 minute   rescheduleDate
+                   .Build();
 
-            // Schedule the job with the trigger
-            await Scheduler.ScheduleJob(job, trigger);
+                // Schedule the job with the trigger
+                await Scheduler.ScheduleJob(job, trigger);
+
+                return "Email job rescheduled successfully.";
+            }
+            catch (Exception ex)
+            {
+                return $"Error occurred while rescheduling the email job: {ex.Message}";
+            }
+
         }
     }
 

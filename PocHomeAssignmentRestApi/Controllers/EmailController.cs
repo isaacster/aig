@@ -34,12 +34,12 @@ public class EmailController : ControllerBase
         {
             _loggerRepository.AddLog(new LogTable() { ActivityData = "RescheduleActionAsync", Timestamp = DateTime.Now });
 
-            await _scheduler.RescheduleSendEmailAsync(requestModel);
+            string response = await _scheduler.RescheduleSendEmailAsync(requestModel);
 
-            return Ok("Jobs scheduled successfully!");
+            return Ok(response);
         }
         catch (Exception ex)
-        {           
+        {
             return StatusCode(500, new { Error = "An error occurred during the custom action." });
         }
     }
