@@ -1,10 +1,10 @@
 # aig
 The ui is written in React and using redux and global context for state management 
 
-
+The Server side is using Quartz.net for the scheduling and Dependency Injection for ILoggerRepository and IEmailScheduleService 
 
 *****************************************
-Database - please install the below script in order the logger to work 
+Database - please install the below script in order for the logger to work 
 *****************************************
 
 
